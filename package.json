@@ -1,0 +1,28 @@
+{
+  "name": "bkk-app",
+  "version": "0.0.1",
+  "description": "prototype",
+  "main": "src/app.js",
+  "author": "Tran Trung Tin <trungtindev@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2016-node5": "^1.1.2",
+    "babel-preset-react": "^6.5.0",
+    "electron-prebuilt-compile": "latest",
+    "eslint": "^3.16.1",
+    "eslint-config-standard": "^7.0.0",
+    "eslint-config-standard-flow": "^1.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.0",
+    "eslint-plugin-standard": "^2.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "standard",
+    "standard-flow",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "sails": false
+  },
+  "plugins": [ "flowtype" ]
+}
