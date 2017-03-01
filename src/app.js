@@ -1,4 +1,5 @@
 import {app, BrowserWindow} from 'electron'
+import {enableLiveReload} from 'electron-compile'
 
 let mainWindow = null
 
@@ -7,6 +8,7 @@ app.on('window-all-closed', () => {
 })
 
 app.on('ready', () => {
+  enableLiveReload({strategy: 'react-hmr'})
   mainWindow = new BrowserWindow({
     width: 700,
     height: 760,

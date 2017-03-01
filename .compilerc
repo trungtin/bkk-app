@@ -3,6 +3,7 @@
     "development": {
       "application/javascript": {
         "presets": ["es2016-node5", "react"],
+        "plugins": ["react-hot-loader/babel"],
         "sourceMaps": "inline"
       }
     },
