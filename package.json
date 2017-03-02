@@ -7,14 +7,22 @@
   "license": "MIT",
   "dependencies": {
     "@blueprintjs/core": "^1.10.0",
+    "cross-env": "^3.1.4",
+    "electron-devtools-installer": "^2.1.0",
     "flow-bin": "^0.40.0",
     "react": "latest",
     "react-addons-css-transition-group": "^15.4.2",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-redux": "^5.0.3",
+    "react-router": "next",
+    "react-router-dom": "next",
+    "react-router-redux": "^4.0.8",
+    "redux": "^3.6.0"
   },
   "private": true,
   "scripts": {
-    "start": "electron ."
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development electron .",
+    "debug": "./node_modules/.bin/cross-env NODE_ENV=development DEBUG=*,-babel electron ."
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",

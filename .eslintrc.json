@@ -11,5 +11,8 @@
   "plugins": [ "flowtype" ],
   "rules": {
     "no-useless-constructor": 1
+  },
+  "globals": {
+    "__DEV__": false
   }
 }

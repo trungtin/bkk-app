@@ -6,11 +6,17 @@ import { FocusStyleManager } from '@blueprintjs/core'
 
 FocusStyleManager.onlyShowFocusOnTabs()
 
+const store = require('./utils/storeFactory').default({})
+
 const render = () => {
   // NB: We have to re-require MyApp every time or else this won't work
   // We also need to wrap our app in the AppContainer class
-  const Main = require('./containers/main').default
-  ReactDOM.render(<AppContainer><Main /></AppContainer>, document.getElementById('app'))
+  const Root = require('./root').default
+  ReactDOM.render(<AppContainer>
+    <Root
+      store={store}
+    />
+  </AppContainer>, document.getElementById('app'))
 }
 
 render()
