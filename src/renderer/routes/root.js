@@ -3,11 +3,13 @@
 import React from 'react'
 import {
   Router,
-  Route
+  Route,
+  Switch
 } from 'react-router'
 
 import Main from '../containers/main'
 import Setting from '../containers/Setting/Setting'
+import Home from '../containers/Home/Home'
 
 import createHashHistory from 'history/createHashHistory'
 
@@ -37,8 +39,12 @@ export default class RootRoute extends React.Component {
         // }))}
       >
         <div>
+
           <Route component={Main} />
-          <Route path='/setting' component={Setting} />
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/setting' component={Setting} />
+          </Switch>
         </div>
       </Router>
     )
