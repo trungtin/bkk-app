@@ -8,5 +8,8 @@
   "globals": {
     "sails": false
   },
-  "plugins": [ "flowtype" ]
+  "plugins": [ "flowtype" ],
+  "rules": {
+    "no-useless-constructor": 1
+  }
 }
