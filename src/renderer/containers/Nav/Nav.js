@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default class Nav extends React.Component {
   constructor (props) {
@@ -12,12 +13,16 @@ export default class Nav extends React.Component {
         <input className='pt-input' placeholder='Search...' type='text' />
       </div>
       <div className='pt-navbar-group pt-align-right'>
-        <button className='pt-button pt-minimal pt-icon-home'>Home</button>
+        <Link replace to='home'>
+          <button className='pt-button pt-minimal pt-icon-home'>Home</button>
+        </Link>
         <button className='pt-button pt-minimal pt-icon-document'>Files</button>
         <span className='pt-navbar-divider' />
         <button className='pt-button pt-minimal pt-icon-user' />
         <button className='pt-button pt-minimal pt-icon-notifications' />
-        <button className='pt-button pt-minimal pt-icon-cog' />
+        <Link replace to='setting'>
+          <button className='pt-button pt-minimal pt-icon-cog' />
+        </Link>
       </div>
     </nav>)
   }

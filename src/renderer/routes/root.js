@@ -7,9 +7,13 @@ import {
 } from 'react-router'
 
 import Main from '../containers/main'
+import Setting from '../containers/Setting/Setting'
+
+import createHashHistory from 'history/createHashHistory'
+
+const history = createHashHistory()
 
 type RootRouteProps = {
-  history: Object
 }
 
 export default class RootRoute extends React.Component {
@@ -20,7 +24,6 @@ export default class RootRoute extends React.Component {
   }
 
   render () {
-    const { history } = this.props
     return (
       <Router
         history={history}
@@ -33,7 +36,10 @@ export default class RootRoute extends React.Component {
         //   return true
         // }))}
       >
-        <Route path='/' component={Main} />
+        <div>
+          <Route component={Main} />
+          <Route path='/setting' component={Setting} />
+        </div>
       </Router>
     )
   }
