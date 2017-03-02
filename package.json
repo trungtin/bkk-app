@@ -6,7 +6,9 @@
   "author": "Tran Trung Tin <trungtindev@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "@blueprintjs/core": "^1.10.0",
     "react": "latest",
+    "react-addons-css-transition-group": "^15.4.2",
     "react-dom": "latest"
   },
   "private": true,
