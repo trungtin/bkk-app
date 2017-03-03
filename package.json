@@ -8,15 +8,21 @@
   "dependencies": {
     "@blueprintjs/core": "^1.10.0",
     "cross-env": "^3.1.4",
+    "epub.js": "^0.2.15",
     "flexboxgrid": "^6.3.1",
     "flow-bin": "^0.40.0",
-    "react": "latest",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",
-    "react-dom": "latest",
+    "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
-    "react-router": "next",
-    "react-router-dom": "next",
-    "redux": "^3.6.0"
+    "react-router": "^4.0.0-beta.6",
+    "react-router-dom": "^4.0.0-beta.6",
+    "redux": "^3.6.0",
+    "redux-actions": "^1.2.2",
+    "redux-observable": "^0.13.0",
+    "rxdb": "^3.0.2",
+    "rxjs": "^5.2.0"
   },
   "private": true,
   "scripts": {
@@ -28,13 +34,13 @@
     "babel-preset-es2016-node5": "^1.1.2",
     "babel-preset-react": "^6.5.0",
     "electron-devtools-installer": "^2.1.0",
-    "electron-prebuilt-compile": "latest",
+    "electron-prebuilt-compile": "^1.4.15",
     "eslint": "^3.16.1",
     "eslint-config-standard": "^7.0.0",
     "eslint-config-standard-flow": "^1.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.0",
     "eslint-plugin-standard": "^2.0.1",
-    "react-hot-loader": "next"
+    "react-hot-loader": "^3.0.0-beta.6"
   }
 }
