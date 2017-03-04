@@ -13,6 +13,7 @@
     "no-useless-constructor": 1
   },
   "globals": {
-    "__DEV__": false
+    "__DEV__": false,
+    "logger": false
   }
 }
