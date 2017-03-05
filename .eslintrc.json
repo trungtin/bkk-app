@@ -10,7 +10,8 @@
   },
   "plugins": [ "flowtype" ],
   "rules": {
-    "no-useless-constructor": 1
+    "no-useless-constructor": 1,
+    "comma-dangle": 0
   },
   "globals": {
     "__DEV__": false,
