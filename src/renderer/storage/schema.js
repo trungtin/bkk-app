@@ -1,9 +1,10 @@
-export const storage = {
-  'title': 'Storage schema',
+export const file = {
+  'name': 'Storage/file schema',
   'description': 'Describe book file path',
   'type': 'object',
+  version: 0,
   'properties': {
-    'name': {
+    'book_title': {
       'type': 'string',
       'primary': true
     },
@@ -19,8 +20,10 @@ export const storage = {
 }
 
 export const book = {
-  'title': 'Book schema',
+  'name': 'Book schema',
   description: 'Describe specific book',
+  'type': 'object',
+  version: 0,
   properties: {
     'title': {
       type: 'string',

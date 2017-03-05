@@ -4,14 +4,14 @@ import * as Schema from './schema'
 
 RxDB.plugin(require('pouchdb-adapter-idb'))
 
-const collections = Object.keys(Schema).map(k => Schema[k])
+const collections = Object.keys(Schema).map(k => ({ name: k, schema: Schema[k] }))
 
 let dbPromise = null
 
 const _create = async function () {
   logger.verbose('DatabaseService: creating database..')
   const db = await RxDB.create({
-    name: 'Sophie',
+    name: 'sophie',
     adapter: 'idb',
     password: 'DumbSh1tP433w0rd'
   })
