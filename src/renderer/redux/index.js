@@ -1,8 +1,8 @@
 // @flow
 
 import { combineReducers } from 'redux'
-import { routerReducer } from 'react-router-redux'
+import indexing from './indexing'
 
 export default combineReducers({
-  routing: routerReducer
+  indexing
 })
