@@ -5,7 +5,23 @@ import { createEpicMiddleware } from 'redux-observable'
 import reducer from '../redux'
 import epics from '../epics'
 
-const epicMiddleware = createEpicMiddleware(epics)
+const _epicMiddleware = createEpicMiddleware(epics)
+
+const epicMiddleware = store => {
+  const middleware = _epicMiddleware(store)
+  return next => action => {
+    try {
+      middleware(next)(action)
+    } catch (e) {
+      if (e.type) {
+        next({ type: `${e.type}_FAILURE`, payload: e })
+      } else {
+        throw e
+      }
+    }
+  }
+}
+epicMiddleware.replaceEpic = _epicMiddleware.replaceEpic
 
 const __DEV__ = process.env.NODE_ENV === 'development'
 
