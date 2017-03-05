@@ -5,7 +5,7 @@ import {
   Router,
   Route,
   Switch
-} from 'react-router'
+} from 'react-router-dom'
 
 import Main from '../containers/main'
 import Setting from '../containers/Setting/Setting'
