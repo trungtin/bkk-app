@@ -2,9 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
+import winston from 'winston'
 import { FocusStyleManager } from '@blueprintjs/core'
 
 FocusStyleManager.onlyShowFocusOnTabs()
+
+const logger = new (winston.Logger)({
+  transports: [
+    new (winston.transports.Console)()
+  ]
+})
+
+global.logger = logger
 
 const store = require('./utils/storeFactory').default({})
 
