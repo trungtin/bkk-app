@@ -6,14 +6,24 @@ export const file = {
   'properties': {
     'book_title': {
       'type': 'string',
-      'primary': true
+      ref: 'book'
     },
     'filePath': {
       type: 'string',
-      unique: true
+      'primary': true
+    },
+    'fileExt': {
+      type: 'string'
     },
     lastTimeOpen: {
       type: 'date'
+    },
+    publicationDate: {
+      type: 'date'
+    },
+    isbn: {
+      type: 'string',
+      unique: true
     }
   },
   'required': []
@@ -27,7 +37,7 @@ export const book = {
   properties: {
     'title': {
       type: 'string',
-      primary: true
+      index: true
     },
     author: {
       type: 'object',
@@ -49,9 +59,6 @@ export const book = {
     },
     description: {
       type: 'string'
-    },
-    publicationDate: {
-      type: 'date'
     }
   }
 }

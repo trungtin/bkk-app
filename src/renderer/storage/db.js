@@ -19,7 +19,9 @@ const _create = async function () {
 
     // create collections
   logger.verbose('DatabaseService: creating collections...')
-  await Promise.all(collections.map(colData => db.collection(colData)))
+  await Promise.all(collections.map(colData =>
+    db.collection(colData)
+  ))
   logger.info('DatabaseService: created collections')
 
   global['db'] = db
