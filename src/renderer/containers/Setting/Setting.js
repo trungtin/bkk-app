@@ -1,15 +1,22 @@
 /* @flow */
 
 import React from 'react'
+import { connect } from 'react-redux'
+
+import { addLibraryPath } from '../../redux/actions'
 import { remote } from 'electron'
 
 const { dialog } = remote
 
-type SettingProps = {
-
+const mapActionsToProps = {
+  addLibraryPath
 }
 
-export default class Setting extends React.Component {
+type SettingProps = {
+  addLibraryPath: Function
+}
+
+class Setting extends React.Component {
   props: SettingProps
 
   state: {
@@ -27,11 +34,13 @@ export default class Setting extends React.Component {
           <button className='pt-button pt-intent-primary' onClick={() => dialog.showOpenDialog({
             properties: ['openDirectory', 'createDirectory', 'promptToCreate'],
             title: 'Select storage folder'
-          }, function (f) {
-            console.log(f)
+          }, f => {
+            this.props.addLibraryPath(f)
           })} >Choose</button>
         </div>
       </div>
     )
   }
 }
+
+export default connect(undefined, mapActionsToProps)(Setting)

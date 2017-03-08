@@ -8,10 +8,12 @@
   "dependencies": {
     "@blueprintjs/core": "^1.10.0",
     "cross-env": "^3.1.4",
+    "epub-metadata-parser": "^1.1.12",
     "epub.js": "^0.2.15",
     "flexboxgrid": "^6.3.1",
     "flow-bin": "^0.40.0",
     "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1",
     "pouchdb-adapter-idb": "^6.1.2",
     "react": "^15.4.2",
     "react-addons-css-transition-group": "^15.4.2",

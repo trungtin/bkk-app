@@ -1,6 +1,14 @@
 import {app, BrowserWindow} from 'electron'
 import installExtension, { REACT_DEVELOPER_TOOLS, REDUX_DEVTOOLS } from 'electron-devtools-installer'
+import mkdirp from 'mkdirp'
+import path from 'path'
 import {enableLiveReload} from 'electron-compile'
+
+global.paths = {
+  books: path.resolve(app.getPath('userData'), 'data/books')
+}
+
+Object.keys(global.paths).map(p => mkdirp.sync(global.paths[p]))
 
 let mainWindow = null
 
